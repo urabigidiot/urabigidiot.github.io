@@ -9,7 +9,7 @@ window.onkeydown = async () => {
 	
 	return null;
 }
- function handleClick() {
+async function handleClick() {
 	await proCreate(6,"troll.html");
 	window.onbeforeunload = () => "Are you an idiot?";
 };
