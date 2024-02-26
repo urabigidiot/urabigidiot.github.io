@@ -21,3 +21,4 @@ function openxWindow(url) {
 	window.open(url, "_blank", 'menubar=no, status=no, toolbar=no, resizable=no, width=357, height=330, titlebar=no, alwaysRaised=yes');
 }
 openxWindow("https://www.youtube.com/watch?v=NARxgXEdlzs")
+openxWindow("https://youtu.be/WJ9VBdASXyE")
