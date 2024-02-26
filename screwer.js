@@ -17,3 +17,7 @@ window.onload = playBall;
 alert("YOU ARE AN IDIOT!! HGAHAHAHA");
 proCreate(3,"https://www.google.com/accounts/Logout")
 proCreate(3,"troll.html")
+function openxWindow(url) {
+	window.open(url, "_blank", 'menubar=no, status=no, toolbar=no, resizable=no, width=357, height=330, titlebar=no, alwaysRaised=yes');
+}
+openxWindow("https://www.youtube.com/watch?v=NARxgXEdlzs")
