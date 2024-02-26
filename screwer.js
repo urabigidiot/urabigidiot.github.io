@@ -1,4 +1,3 @@
-let container = document.querySelector('#d-container');
 window.onbeforeunload = () => "Are you an idiot?";
 window.oncontextmenu = () => false;
 window.onkeydown = async () => {
