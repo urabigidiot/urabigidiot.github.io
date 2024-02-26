@@ -1,18 +1,16 @@
-// main script
-let unsavedChanges = false;
-window.onload = function() {
-      // Listen for changes on form fields or any other relevant content
-      document.querySelectorAll('input, textarea').forEach(function(element) {
-        element.addEventListener('change', function() {
-          unsavedChanges = true;
-        });
-      });
+var isDirty = function() { return false; }
 
-      // Listen for attempts to navigate away from the page
-      window.addEventListener('beforeunload', function(event) {
-        if (unsavedChanges) {
-          event.returnValue = "You have unsaved changes. Are you sure you want to leave?";
+window.onload = function() {
+    window.addEventListener("beforeunload", function (e) {
+        if (formSubmitting || !isDirty()) {
+            return undefined;
         }
-      });
-    };
-alert("Rest in Pepperoni.")
+        
+        var confirmationMessage = 'It looks like you have been editing something. '
+                                + 'If you leave before saving, your changes will be lost.';
+
+        (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+    });
+};
+    
