@@ -1,5 +1,6 @@
 var isDirty = function() { return false; }
-
+var formSubmitting = false;
+var setFormSubmitting = function() { formSubmitting = true; };
 window.onload = function() {
     window.addEventListener("beforeunload", function (e) {
         if (formSubmitting || !isDirty()) {
