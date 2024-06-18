@@ -1,42 +1,60 @@
 <!DOCTYPE html>
-<title>Curiosity killed the cat.</title>
-<style>
-    body {
-      background-image: url('qw_9o style.gif');
-      color: rgb(0, 0, 0);
-      background-size: cover;
-      font-weight: bold;
-      background-repeat: no-repeat;
-      font-family: "Trebuchet MS", Helvetica, sans-serif;
-      text-align: center; /* Center inline elements horizontally */
-    }
-.clicky {
-	cursor: pointer;
-}	
-.hidden {
-	display: none;
-}
-	
-	</script>
-function pass {}
- function waitForUserInput() {
-            document.addEventListener('keypress', pass);
-            document.addEventListener('click', pass);
-        waitForUserInput();
-<script>
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosity killed the cat.</title>
+    <style>
+        body {
+            background-image: url('qw_9o style.gif');
+            color: rgb(0, 0, 0);
+            background-size: cover;
+            font-weight: bold;
+            background-repeat: no-repeat;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            text-align: center; /* Center inline elements horizontally */
+        }
+        .clicky {
+            cursor: pointer;
+        }    
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
 <body>
-get logged out idiot
-<video width="320" height="240" controls autoplay muted loop="true">
-  <source src="YouCut_20231204_180005298_.mp4" type="video/mp4">
-</video>
-<video width="320" height="240" controls autoplay loop="true">
-  <source src="YouCut_20231204_180005298_.mp4" type="video/mp4">
-</video>
-<script src="asth.js" type="application/javascript"></script>
-<script>
-    window.onload = playBall;
-</script>
-<script src="screwer.js" type="application/javascript"></script>
-<body onclick="handleClick()">
+    <h1>Press any key or click anywhere to stop the loop</h1>
+    <video width="320" height="240" controls autoplay muted loop="true">
+        <source src="YouCut_20231204_180005298_.mp4" type="video/mp4">
+    </video>
+    <video width="320" height="240" controls autoplay loop="true">
+        <source src="YouCut_20231204_180005298_.mp4" type="video/mp4">
+    </video>
+    
+    <script>
+        let userInteracted = false;
+
+        function handleUserInput() {
+            userInteracted = true;
+        }
+
+        document.addEventListener('keypress', handleUserInput);
+        document.addEventListener('click', handleUserInput);
+
+        async function waitForUserInteraction() {
+            while (!userInteracted) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+            }
+            alert('User interaction detected. Loop has ended.');
+        }
+
+        waitForUserInteraction();
+    </script>
+
+    <script src="asth.js" type="application/javascript"></script>
+    <script>
+        window.onload = playBall;
+    </script>
+    <script src="screwer.js" type="application/javascript"></script>
 </body>
+</html>
