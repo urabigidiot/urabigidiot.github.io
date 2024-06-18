@@ -27,13 +27,12 @@ function loadScript(url) {
             while (!userInteracted) {
                 await new Promise(resolve => setTimeout(resolve, 100));
             }
-            
-        loadScript("asth.js");
             playBall()
             loadScript("screwer.js");
         }
 
         waitForUserInteraction();
     </script>
+    <script src="asth.js" type="application/javascript"></script>
 </body>
 </html>
